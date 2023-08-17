@@ -6,12 +6,18 @@ public class Ques27 {
         int n = scanner.nextInt();
 
         for(int i=1; i<=n; i++){
-            for(int j=n-1; j>=i; j--){
-                System.out.print("\t");
+            for(int j=1; j<=n-i; j++){
+                System.out.print("  ");
             }
-            for(int k=i-1; k>=-(i-1); k--){
-                System.out.print(i-Math.abs(k)+"\t");
+
+            for(int j=1; j<=(i*2-1)/2; j++){
+                System.out.print(j+" ");
             }
+
+            for(int j=(i*2)/2; j>=1; j--){
+                System.out.print(j+" ");
+            }
+            
             System.out.println();
         }
     }

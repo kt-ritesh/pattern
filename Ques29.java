@@ -1,27 +1,21 @@
-import java.util.Scanner;
-
-public class Ques28 {
+import java.util.*;
+public class Ques29 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
         for(int i=1; i<=n; i++){
             for(int j=1; j<=n-i; j++){
                 System.out.print("  ");
             }
 
-            int p = i;
             for(int j=1; j<=(i*2-1); j++){
-                System.out.print(p+" ");
-                if(j<i){
-                    p++;
+                if(j==1 || j==(i*2-1)){
+                    System.out.print(i+" ");
                 }else{
-                    p--;
+                    System.out.print("0 ");
                 }
-                
             }
-
-            
             System.out.println();
         }
     }
